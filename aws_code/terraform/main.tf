@@ -7,7 +7,7 @@ provider "aws" {
 }
 
 #############################################################################################################################
-
+/*
 # Creating VPC and SUBNET resources using vpc module in tf_Module Folder.
 module "ETL_VPC" {
     source = "./tf_Modules/vpc"
@@ -47,7 +47,7 @@ module "ETL_machine" {
     ec2_subnet_id = "${module.ETL_VPC.subnet_id}" 
 }
 
-
+*/
 #############################################################################################################################
 
 # Creating S3 Bucket for Dumping CSV Data from different Data Sources
