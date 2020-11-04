@@ -1,5 +1,5 @@
 
-# All the variables this VPC module can send to dev (or) prod (or) Env.
+# All the variables this VPC module can send to dev (or) prod (or) any other Envs.
 
 
 output "vpc_id" {

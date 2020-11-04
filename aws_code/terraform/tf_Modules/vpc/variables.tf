@@ -1,4 +1,6 @@
 
+# Defining Input Variables for VPC module
+
 
 # https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing
 variable "vpc_cidr_block" {
