@@ -47,7 +47,7 @@ module "ETL_machine" {
     ec2_subnet_id = "${module.ETL_VPC.subnet_id}" 
 }
 
-*/
+
 #############################################################################################################################
 
 # Creating S3 Bucket for Dumping CSV Data from different Data Sources
@@ -62,4 +62,21 @@ module "ETL_bucket" {
     bucket_tag = "dumped-data-lake" 
     
 }
+*/
+
+#############################################################################################################################
+
+# Creating DynamoDB Tables for data injecting from dumped-data-lake S3 Bucket through lambda function
+module "ETL_Nosql_table" {
+    source = "./tf_Modules/dynamoDB"
+
+    # No Default Value
+    nosql_table_name = "XXX"
+
+    # No Default value
+    primary_key_name = "XXX" 
+
+    # Default is "S"
+    primary_key_type = "S"
     
+}
