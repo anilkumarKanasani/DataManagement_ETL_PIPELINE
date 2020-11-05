@@ -9,6 +9,6 @@ resource "aws_s3_bucket" "ETL_bucket" {
 
   tags = {
     Name        = "${var.bucket_tag}"
-    Environment = "Dev"
+    Environment = "DM_ETL_Project"
   }
 }

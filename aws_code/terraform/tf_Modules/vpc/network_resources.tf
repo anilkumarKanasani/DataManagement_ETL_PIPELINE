@@ -8,6 +8,7 @@ resource "aws_vpc" "ETL_VPC" {
 
   tags = {
     Name = "ETL_VPC"
+    Environment = "DM_ETL_Project"
   }
 }
 
@@ -22,5 +23,6 @@ resource "aws_subnet" "ETL_subnet" {
 
   tags = {
     Name = "ETL_subnet"
+    Environment = "DM_ETL_Project"
   }
 }

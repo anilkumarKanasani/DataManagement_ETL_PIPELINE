@@ -10,6 +10,7 @@ resource "aws_instance" "ETL_machine" {
     force_destroy = true
 
   tags = {
-    Name = "ETL_machine"
+    Name = "ETL_ec2_machine"
+    Environment = "DM_ETL_Project"
   }
 }
