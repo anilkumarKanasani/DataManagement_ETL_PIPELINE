@@ -1,4 +1,4 @@
-<mxfile modified="2020-11-06T20:03:50.382Z" host="app.diagrams.net" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.183 Safari/537.36" etag="3XZb6TjQKjJ4G4phQdVO" version="13.9.2" type="github">
+<mxfile modified="2020-11-06T20:08:52.310Z" host="app.diagrams.net" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.183 Safari/537.36" etag="c-LQjr2mWMPt4T6VDB2J" version="13.9.2" type="github">
   <diagram id="Ht1M8jgEwFfnCIfOTk4-" name="Page-1">
     <mxGraphModel dx="8893" dy="5347" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="4681" pageHeight="3300" math="0" shadow="0">
       <root>
@@ -6,6 +6,9 @@
         <mxCell id="1" parent="0" />
         <mxCell id="8GEFBkU2QKpO8UW0B2yC-3" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn3.iconfinder.com/data/icons/tiny-weather-1/512/flash-cloud-128.png" vertex="1" parent="1">
           <mxGeometry x="60" y="2470" width="300" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="8GEFBkU2QKpO8UW0B2yC-4" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn2.iconfinder.com/data/icons/social-media-2259/512/search-128.png" vertex="1" parent="1">
+          <mxGeometry x="90" y="1990" width="230" height="230" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
