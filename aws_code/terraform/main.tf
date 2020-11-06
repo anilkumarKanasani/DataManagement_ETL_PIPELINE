@@ -49,7 +49,7 @@ module "ETL_machine" {
 
 
 #############################################################################################################################
-
+*/
 # Creating S3 Bucket for Dumping CSV Data from different Data Sources
 module "ETL_bucket" {
     source = "./tf_Modules/s3"
@@ -62,8 +62,8 @@ module "ETL_bucket" {
     bucket_tag = "dumped-data-lake" 
     
 }
-*/
 
+/*
 #############################################################################################################################
 
 # Creating DynamoDB Tables for data injecting from dumped-data-lake S3 Bucket through lambda function
@@ -80,3 +80,4 @@ module "ETL_Nosql_table" {
     primary_key_type = "S"
     
 }
+*/

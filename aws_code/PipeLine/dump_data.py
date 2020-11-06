@@ -12,7 +12,7 @@ s3_client = boto3.resource('s3')
 # Now we are uploading files into dumped-data-lake bucket (which is created by Terraform)
 BUCKET = 'dumped-data-lake'
 
-# Looping overall local files and uploading into dumped-data-lake file by file
+# Looping overall local files and uploading into dumped-data-lake file by file into the same bucket ( lake )
 for file in list_of_dumped_files:
     local_file = data_set_local_path + file
     s3_client.Bucket(BUCKET).upload_file(local_file, file)
