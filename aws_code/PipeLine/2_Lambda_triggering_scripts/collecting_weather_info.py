@@ -21,21 +21,22 @@ def trigger_weather_info(event , context ):
         records = data.split("\n")
         for record in records:
             record = record.split(",")
-            table.put_item(
-                Item = {
-                        "RECORD_ID" : record[0],
-                        'CODE': record[1],
-                        'PROVINCE': record[2],
-                        'DATE': record[3],
-                        'AVG_TEMP': record[4],
-                        'MIN_TEMP': record[5],
-                        'MAX_TEMP': record[6],
-                        'PRECIPITATION': record[7],
-                        'MAX_WIND_SPEED': record[8],
-                        'MOST_WIND_DIRECTION': record[9],
-                        'AVG_RELATIVE_HUMIDITY': record[10]
-                        }
-                    )
+            if record[0].upper() != "RECORD_ID" :
+                table.put_item(
+                    Item = {
+                            "RECORD_ID" : record[0],
+                            'CODE': record[1],
+                            'PROVINCE': record[2],
+                            'DATE': record[3],
+                            'AVG_TEMP': record[4],
+                            'MIN_TEMP': record[5],
+                            'MAX_TEMP': record[6],
+                            'PRECIPITATION': record[7],
+                            'MAX_WIND_SPEED': record[8],
+                            'MOST_WIND_DIRECTION': record[9],
+                            'AVG_RELATIVE_HUMIDITY': record[10]
+                            }
+                        )
     except :
         missed_records += 1
    

@@ -21,18 +21,19 @@ def trigger_time(event , context ):
         records = data.split("\n")
         for record in records:
             record = record.split(",")
-            table.put_item(
-                Item = {
-                        "RECORD_ID" : record[0],
-                        'DATE': record[1],
-                        'TIME': record[2],
-                        'TEST': record[3],
-                        'NEGATIVE': record[4],
-                        'CONFIRMED': record[5],
-                        'RELEASED': record[6],
-                        'DECEASED': record[7]
-                        }
-                    )
+            if record[0].upper() != "RECORD_ID" :
+                table.put_item(
+                    Item = {
+                            "RECORD_ID" : record[0],
+                            'DATE': record[1],
+                            'TIME': record[2],
+                            'TEST': record[3],
+                            'NEGATIVE': record[4],
+                            'CONFIRMED': record[5],
+                            'RELEASED': record[6],
+                            'DECEASED': record[7]
+                            }
+                        )
     except :
         missed_records += 1
     

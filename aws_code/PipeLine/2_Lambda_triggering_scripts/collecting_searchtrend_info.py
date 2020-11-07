@@ -21,15 +21,16 @@ def trigger_searchtrend_info(event , context ):
         records = data.split("\n")
         for record in records:
             record = record.split(",")
-            table.put_item(
-                Item = {
-                        'RECORD_ID' : record[0],
-                        'DATE': record[1],
-                        'COLD': record[2],
-                        'FLU': record[3],
-                        'PNEUMONIA': record[4],
-                        'CORONAVIRUS': record[5]
-                        }
-                    )
+            if record[0].upper() != "RECORD_ID" :
+                table.put_item(
+                    Item = {
+                            'RECORD_ID' : record[0],
+                            'DATE': record[1],
+                            'COLD': record[2],
+                            'FLU': record[3],
+                            'PNEUMONIA': record[4],
+                            'CORONAVIRUS': record[5]
+                            }
+                        )
     except :
         missed_records += 1

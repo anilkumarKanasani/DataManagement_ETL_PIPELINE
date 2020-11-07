@@ -21,17 +21,19 @@ def trigger_hospital_record_cases(event , context ):
         records = data.split("\n")
         for record in records:
             record = record.split(",")
-            table.put_item(
-                Item = {
-                        "CASE_ID" : record[0] ,
-                        "PROVINCE" : record[1] ,
-                        "CITY" : record[2] ,
-                        "GROUP" : record[3] ,
-                        "INFECTION_CASE" : record[4] ,
-                        "CONFIRMED" : record[5] ,
-                        "LATITUDE" : record[6] ,
-                        "LONGITUTDE" : record[7]
-                    }
-                    )
+            
+            if record[0].upper() != "CASE_ID" :
+                table.put_item(
+                    Item = {
+                            "CASE_ID" : record[0] ,
+                            "PROVINCE" : record[1] ,
+                            "CITY" : record[2] ,
+                            "GROUP" : record[3] ,
+                            "INFECTION_CASE" : record[4] ,
+                            "CONFIRMED" : record[5] ,
+                            "LATITUDE" : record[6] ,
+                            "LONGITUTDE" : record[7]
+                        }
+                        )
     except :
         missed_records += 1

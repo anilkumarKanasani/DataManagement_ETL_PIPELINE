@@ -21,16 +21,17 @@ def trigger_time_age(event , context ):
         records = data.split("\n")
         for record in records:
             record = record.split(",")
-            table.put_item(
-                Item = {
-                        "RECORD_ID" : record[0],
-                        'DATE': record[1],
-                        'TIME': record[2],
-                        'AGE': record[3],
-                        'CONFIRMED': record[4],
-                        'DECEASED': record[5]
-                        }
-                    )
+            if record[0].upper() != "RECORD_ID" :
+                table.put_item(
+                    Item = {
+                            "RECORD_ID" : record[0],
+                            'DATE': record[1],
+                            'TIME': record[2],
+                            'AGE': record[3],
+                            'CONFIRMED': record[4],
+                            'DECEASED': record[5]
+                            }
+                        )
     except :
         missed_records += 1
     

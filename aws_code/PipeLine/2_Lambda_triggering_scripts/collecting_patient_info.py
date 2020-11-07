@@ -21,21 +21,23 @@ def trigger_patient_info(event , context ):
         records = data.split("\n")
         for record in records:
             record = record.split(",")
-            table.put_item(
-                Item = {'PATIENT_ID': record[0],
-                        'SEX': record[1],
-                        'AGE': record[2],
-                        'COUNTRY': record[3],
-                        'PROVINCE': record[4],
-                        'CITY': record[5],
-                        'INFECTION_CASE': record[6],
-                        'INFECTED_BY': record[7],
-                        'CONTACT_NUMBER': record[8],
-                        'SYMPTOM_ONSET_DATE': record[9],
-                        'CONFIRMED_DATE': record[10],
-                        'RELEASED_DATE': record[11],
-                        'DECEASED_DATE': record[12],
-                        'STATE': record[13]}
-                    )
+            if record[0].upper() != "PATIENT_ID" :
+                table.put_item(
+                    Item = {
+                            'PATIENT_ID': record[0],
+                            'SEX': record[1],
+                            'AGE': record[2],
+                            'COUNTRY': record[3],
+                            'PROVINCE': record[4],
+                            'CITY': record[5],
+                            'INFECTION_CASE': record[6],
+                            'INFECTED_BY': record[7],
+                            'CONTACT_NUMBER': record[8],
+                            'SYMPTOM_ONSET_DATE': record[9],
+                            'CONFIRMED_DATE': record[10],
+                            'RELEASED_DATE': record[11],
+                            'DECEASED_DATE': record[12],
+                            'STATE': record[13]}
+                        )
     except :
         missed_records += 1
