@@ -11,7 +11,8 @@ default = ["dumped-hospital-record-cases" ,
                 "dumped-time-gender" , 
                 "dumped-time-provience" , 
                 "dumped-weather-south-korea",
-                "schemaless-records"
+                "schemaless-records",
+                "rejected-records"
                 ]
 
 type = list(string)

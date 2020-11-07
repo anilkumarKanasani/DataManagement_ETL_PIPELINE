@@ -1,20 +1,6 @@
 
 # Defining all resource specifications for Lambda Function instances module
 
-resource "aws_iam_role" "lambda_role" {
-  name = "lambda_role"
-
-  assume_role_policy = file("./tf_Resources/policies/lambda_assume_policy.json")
-
-}
-
-
-resource "aws_iam_role_policy" "lambda_policy" {
-  name = "lambda_policy"
-  role = aws_iam_role.lambda_role.id
-
-  policy = file("./tf_Resources/policies/open_to_all_policy.json")
-}
 
 
 data "archive_file" "Collection" {
@@ -27,7 +13,7 @@ data "archive_file" "Collection" {
 resource "aws_lambda_function" "ETL_lambda" {
   filename      = var.zip_file_location
   function_name = var.function_name
-  role          = aws_iam_role.lambda_role.arn
+  role          = var.role
   handler       = var.handler
 
 

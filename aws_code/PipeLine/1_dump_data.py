@@ -18,7 +18,7 @@ LIST_OF_BUCKETS = ["dumped-hospital-record-cases" ,
                 "dumped-time-age" , 
                 "dumped-time-gender" , 
                 "dumped-time-provience" , 
-                "dumped-weather-south-korea"
+                "dumped-weather-south-korea",
                 ]
 
 
@@ -26,6 +26,8 @@ LIST_OF_BUCKETS = ["dumped-hospital-record-cases" ,
 for file , BUCKET in zip(list_of_dumped_files , LIST_OF_BUCKETS):
     local_file = data_set_local_path + file
     s3_client.Bucket(BUCKET).upload_file(local_file, file)
+
+print("The Present Set is uploaded in DataLake")
 
 
 

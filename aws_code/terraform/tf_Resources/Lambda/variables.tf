@@ -23,3 +23,8 @@ variable "handler" {
     type = string
     description = "The python function to be exec in lambda"
 }
+
+
+variable "role" {
+    type = string
+}
