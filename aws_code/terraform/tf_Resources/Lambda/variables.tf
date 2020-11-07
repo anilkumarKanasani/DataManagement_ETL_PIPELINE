@@ -12,7 +12,7 @@ variable "python_file_name" {
 variable "zip_file_location" {
     type = string
     description = "The location where the zip file of python file is saved to be use in lambda function execution"
-    default = "output/collection.zip"
+    default = "python_scripts_bundled/collection.zip"
 }
 
 
