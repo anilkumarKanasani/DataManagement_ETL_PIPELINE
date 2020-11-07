@@ -19,7 +19,7 @@ type = list(string)
 variable "Primary_Keys" {
 default = ["CASE_ID" , 
                 "PATIENT_ID" , 
-                "RECORD_ID" ,
+                "REGION_CODE" ,
                 "RECORD_ID" ,
                 "RECORD_ID" ,
                 "RECORD_ID" ,
