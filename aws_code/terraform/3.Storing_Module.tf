@@ -4,8 +4,8 @@ default = ["hospital-record-cases" ,
                 "patient-info" , 
                 "region-south-korea", 
                 "search-trend-south-korea",
-                "time-reported" , 
-                "time-age" , 
+                "time-reported" ,
+                "time-age" ,
                 "time-gender" , 
                 "time-provience" , 
                 "weather-south-korea"
@@ -19,13 +19,13 @@ type = list(string)
 variable "Primary_Keys" {
 default = ["CASE_ID" , 
                 "PATIENT_ID" , 
-                "PROVINCE_CODE",
-                "RECORDED_DATE",
-                "RECORDED_DATE" , 
-                "RECORDED_DATE" , 
-                "RECORDED_DATE" , 
-                "RECORDED_DATE" , 
-                "PROVINCE_CODE" 
+                "RECORD_ID" ,
+                "RECORD_ID" ,
+                "RECORD_ID" ,
+                "RECORD_ID" ,
+                "RECORD_ID" ,
+                "RECORD_ID" ,
+                "RECORD_ID" 
                 ]
 
 type = list(string)
