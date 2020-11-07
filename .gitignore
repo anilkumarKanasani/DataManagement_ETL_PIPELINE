@@ -1,3 +1,4 @@
 .terraform/
 terraform.tfstate
 terraform.tfstate.backup
+.python_scripts_bundled

@@ -20,16 +20,16 @@ type = list(string)
 
 variable "list_of_zip_file_location" {
 
-default = ["python_scripts_bundled/collecting_cases.zip",
-            "python_scripts_bundled/collecting_patient_info.zip", 
-            "python_scripts_bundled/collecting_region_info.zip",
-            "python_scripts_bundled/collecting_searchtrend_info.zip", 
-            "python_scripts_bundled/collecting_time.zip", 
-            "python_scripts_bundled/collecting_time_age.zip",
-            "python_scripts_bundled/collecting_time_gender.zip", 
-            "python_scripts_bundled/collecting_time_provience.zip", 
-            "python_scripts_bundled/collecting_weather_info.zip", 
-            "python_scripts_bundled/collecting_schemeless_info.zip"
+default = [".python_scripts_bundled/collecting_cases.zip",
+            ".python_scripts_bundled/collecting_patient_info.zip", 
+            ".python_scripts_bundled/collecting_region_info.zip",
+            ".python_scripts_bundled/collecting_searchtrend_info.zip", 
+            ".python_scripts_bundled/collecting_time.zip", 
+            ".python_scripts_bundled/collecting_time_age.zip",
+            ".python_scripts_bundled/collecting_time_gender.zip", 
+            ".python_scripts_bundled/collecting_time_provience.zip", 
+            ".python_scripts_bundled/collecting_weather_info.zip", 
+            ".python_scripts_bundled/collecting_schemeless_info.zip"
     
         ]
 
