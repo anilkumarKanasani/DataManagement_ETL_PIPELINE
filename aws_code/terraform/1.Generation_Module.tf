@@ -2,15 +2,16 @@
 # Creating S3 Bucket for Dumping CSV Data from different Data Sources
 
 variable "list_of_buckets" {
-default = ["hospital-record-cases" , 
-                "patient-info" , 
-                "region-south-korea", 
-                "search-trend-south-korea",
-                "time-reported" , 
-                "time-age" , 
-                "time-gender" , 
-                "time-provience" , 
-                "weather-south-korea"
+default = ["dumped-hospital-record-cases" , 
+                "dumped-patient-info" , 
+                "dumped-region-south-korea", 
+                "dumped-search-trend-south-korea",
+                "dumped-time-reported" , 
+                "dumped-time-age" , 
+                "dumped-time-gender" , 
+                "dumped-time-provience" , 
+                "dumped-weather-south-korea",
+                "schemaless-records"
                 ]
 
 type = list(string)
