@@ -19,7 +19,7 @@ module "ETL_VPC" {
     vpc_tenancy = "default"
 
     # No default Values
-    vpc_id = "${module.ETL_VPC.vpc_id}"
+    vpc_id = module.ETL_VPC.vpc_id
 
     # Default value is 10.0.1.0/24
     subnet_cidr_block = "192.168.1.0/24"
