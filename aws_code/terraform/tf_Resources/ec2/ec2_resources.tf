@@ -7,7 +7,6 @@ resource "aws_instance" "ETL_machine" {
     ami             =   "${var.ec2_ami_id}"
     instance_type   =   "${var.ec2_instance_type}"
     subnet_id       =   "${var.ec2_subnet_id}"
-    force_destroy = true
 
   tags = {
     Name = "ETL_ec2_machine"
