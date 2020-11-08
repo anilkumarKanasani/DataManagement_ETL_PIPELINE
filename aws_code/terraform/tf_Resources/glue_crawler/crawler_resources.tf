@@ -7,7 +7,7 @@ resource "aws_glue_catalog_database" "ETL_catalog_database" {
 
 
 resource "aws_glue_crawler" "ETL_crawler" {
-  database_name = aws_glue_catalog_database.example_catalog_database.name
+  database_name = aws_glue_catalog_database.ETL_catalog_database.name
   name          = var.crawler_name
   role          = var.role
 
