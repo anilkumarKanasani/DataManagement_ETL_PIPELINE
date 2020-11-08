@@ -1,0 +1,2 @@
+Record_id,date,time,province,confirmed,released,deceased
+int,date,int,string,int,int,int

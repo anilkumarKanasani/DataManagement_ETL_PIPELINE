@@ -1,0 +1,2 @@
+Record_id,date,time,test,negative,confirmed,released,deceased
+int,date,int,int,int,int,int,int

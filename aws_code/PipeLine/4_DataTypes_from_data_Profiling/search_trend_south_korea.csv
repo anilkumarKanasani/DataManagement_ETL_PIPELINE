@@ -1,0 +1,2 @@
+Record_id,date,cold,flu,pneumonia,coronavirus
+int,date,double,double,double,double

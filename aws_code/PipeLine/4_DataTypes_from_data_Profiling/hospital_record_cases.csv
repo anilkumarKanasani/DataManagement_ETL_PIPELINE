@@ -1,0 +1,2 @@
+case_id,province,city,group,infection_case,confirmed,latitude,longitude
+int,string,string,BOOLEAN ,string,int,double,double

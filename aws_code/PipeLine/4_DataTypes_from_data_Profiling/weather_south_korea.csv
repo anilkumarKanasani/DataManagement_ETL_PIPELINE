@@ -1,0 +1,2 @@
+Record_id,code,province,date,avg_temp,min_temp,max_temp,precipitation,max_wind_speed,most_wind_direction,avg_relative_humidity
+int,int,string,date,double,double,double,int,double,double,double

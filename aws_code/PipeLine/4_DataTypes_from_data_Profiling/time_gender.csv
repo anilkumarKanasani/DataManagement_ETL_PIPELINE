@@ -1,0 +1,2 @@
+Record_id,date,time,sex,confirmed,deceased
+int,date,int,string,int,int
