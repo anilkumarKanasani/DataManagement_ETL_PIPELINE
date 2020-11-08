@@ -16,5 +16,3 @@ module "ETL_Nosql_table" {
     count      = length(var.list_of_dynamo_tables)
     
 }
-
-
