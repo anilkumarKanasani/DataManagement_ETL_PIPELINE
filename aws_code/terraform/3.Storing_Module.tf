@@ -1,35 +1,5 @@
 
-variable "list_of_dynamo_tables" {
-default = ["hospital-record-cases" , 
-                "patient-info" , 
-                "region-south-korea", 
-                "search-trend-south-korea",
-                "time-reported" ,
-                "time-age" ,
-                "time-gender" , 
-                "time-provience" , 
-                "weather-south-korea"
-                ]
 
-
-type = list(string)
-}
-
-
-variable "Primary_Keys" {
-default = ["CASE_ID" , 
-                "PATIENT_ID" , 
-                "CODE" ,
-                "RECORD_ID" ,
-                "RECORD_ID" ,
-                "RECORD_ID" ,
-                "RECORD_ID" ,
-                "RECORD_ID" ,
-                "RECORD_ID" 
-                ]
-
-type = list(string)
-}
 # Creating DynamoDB Tables for data injecting from dumped-data-lake S3 Bucket through lambda function
 module "ETL_Nosql_table" {
     source = "./tf_Resources/dynamoDB"
