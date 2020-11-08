@@ -1,5 +1,5 @@
 
-variable "list_of_tables" {
+variable "list_of_dynamo_tables" {
 default = ["hospital-record-cases" , 
                 "patient-info" , 
                 "region-south-korea", 
@@ -35,7 +35,7 @@ module "ETL_Nosql_table" {
     source = "./tf_Resources/dynamoDB"
 
     # No Default Value
-    nosql_table_name = element(var.list_of_tables, count.index)
+    nosql_table_name = element(var.list_of_dynamo_tables, count.index)
 
     # No Default value
     primary_key_name = element(var.Primary_Keys, count.index)
@@ -43,7 +43,7 @@ module "ETL_Nosql_table" {
     # Default is "S"
     primary_key_type = "S"
 
-    count      = length(var.list_of_tables)
+    count      = length(var.list_of_dynamo_tables)
     
 }
 

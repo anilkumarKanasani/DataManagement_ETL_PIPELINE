@@ -11,7 +11,7 @@ resource "aws_glue_crawler" "ETL_crawler" {
   name          = var.crawler_name
   role          = var.role
 
-dnnamic "dynamodb_target" {
+dynamic "dynamodb_target" {
     for_each = var.list_of_dynamo_table_names
 
     content {

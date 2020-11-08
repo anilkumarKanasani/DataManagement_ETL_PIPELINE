@@ -19,6 +19,6 @@ variable "database_name" {
 }
 
 variable "list_of_dynamo_table_names" {
-    type = string
+    type = list(string)
 }
 
