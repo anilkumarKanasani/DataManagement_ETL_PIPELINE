@@ -17,3 +17,8 @@ variable "crawler_name" {
 variable "database_name" {
     type = string
 }
+
+variable "list_of_dynamo_table_names" {
+    type = string
+}
+

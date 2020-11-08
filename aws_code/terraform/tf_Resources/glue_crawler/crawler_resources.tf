@@ -11,8 +11,12 @@ resource "aws_glue_crawler" "ETL_crawler" {
   name          = var.crawler_name
   role          = var.role
 
-  dynamodb_target {
-    path = "hospital-record-cases"
+dnnamic "dynamodb_target" {
+    for_each = var.list_of_dynamo_table_names
+
+    content {
+      path = dynamodb_target.value
+    }
   }
 }
 
