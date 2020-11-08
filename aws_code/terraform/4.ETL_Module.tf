@@ -11,3 +11,15 @@ module "ETL_crawler" {
     
     
 }
+
+
+module "ETL_Redshift_cluster" {
+    
+    source = "./tf_Resources/redshift"
+    cluster_identifier = "dm-2-etl-cluster"
+    db_name = "dm-2-etl"
+
+    db_username = "dm-2-etl"
+    db_password = "12345678"
+
+}
