@@ -1,7 +1,7 @@
 import pandas as pd 
 
 
-input_files_location = 'D:/DataManagement-2/DS4C_DataSet_pandas_checking/'
+input_files_location = 'D:/DataManagement-2/DS4C_DataSet/'
 
 # Standard List of Proviences gathered from Regions CSV
 provience_codes = {'Seoul' : 10000,

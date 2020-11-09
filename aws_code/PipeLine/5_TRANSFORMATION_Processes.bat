@@ -9,4 +9,3 @@ python 5_ETL_jobs_for_glue/time-gender.py
 python 5_ETL_jobs_for_glue/time-province.py
 python 5_ETL_jobs_for_glue/time.py
 python 5_ETL_jobs_for_glue/weather.py
-
