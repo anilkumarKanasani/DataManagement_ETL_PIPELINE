@@ -1,7 +1,7 @@
 # importing all requried packages
 import pandas as pd 
 import numpy as np
-from user_defined_functions import transform_slices
+from user_defined_functions import transform_slices , replace_negative_values
 
 
 # Taking path variables requried
@@ -55,24 +55,10 @@ for value in df['sex']:
 
 df['sex'] = pd.Series(li)
 
-li = []
-for value in df['confirmed']:
-        if value >= 0 :
-                li.append(value)
-        else:
-                li.append(0)
 
-df['confirmed'] = pd.Series(li)
+df['confirmed'] = replace_negative_values (df['confirmed'])
+df['deceased'] = replace_negative_values (df['deceased'])
 
-
-li = []
-for value in df['deceased']:
-        if value >= 0 :
-                li.append(value)
-        else:
-                li.append(0)
-
-df['deceased'] = pd.Series(li)
 
 
 df_male = transform_slices ( df , "sex" , "male")
