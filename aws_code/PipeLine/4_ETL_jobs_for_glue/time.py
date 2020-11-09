@@ -1,13 +1,13 @@
 # importing all requried packages
 import pandas as pd 
 import numpy as np
-from user_defined_functions import transform_slices , replace_negative_values , transform_accumulte
+from user_defined_functions import transform_slices , replace_negative_values , transform_accumulte ,input_files_location
 
 
 
 
 # Taking path variables requried
-input_file = "D:/DataManagement-2/DS4C_DataSet_pandas_checking/Time.csv"
+input_file = input_files_location + "Time.csv"
 staging_file= "D:/DataManagement-2/Staging_files/temp_Time.csv"
 Transformed_file= "D:/DataManagement-2/Transfomed_files/Transformed_Time.csv"
 

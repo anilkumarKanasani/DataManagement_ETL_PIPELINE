@@ -1,5 +1,8 @@
 import pandas as pd 
 
+
+input_files_location = 'D:/DataManagement-2/DS4C_DataSet_pandas_checking/'
+
 # converting accumulated values into normal day wise values
 def transform_accumulte(ser):
         temp= ser[0]
