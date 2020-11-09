@@ -1,24 +1,26 @@
 import pandas as pd 
+
+# converting accumulated values into normal day wise values
+def transform_accumulte(ser):
+        temp= ser[0]
+        ser = ser.diff()
+        ser[0] = temp
+        return ser
+
+        
 def transform_slices(df , col_name , value):
         # Adding slice number to male records
         df_ = df[df[col_name] == value].reset_index().drop('index', 1)
-        rows , _ = df_.shape
-        df_['slice_no'] = pd.Series([int(i) for i in range (1 , rows )])
+        df_['slice_no'] = pd.Series([int(i) for i in range (1 , df_.shape[0] +1 )])
+
 
         # converting accumulated values into normal day wise values
-        temp_confirmed = df_.loc[ 0 , "confirmed"] 
-        temp_deceased =  df_.loc[ 0 , "deceased"]
+        df_["confirmed"] = transform_accumulte(df_["confirmed"] )
+        df_["deceased"] = transform_accumulte(df_["deceased"] )
 
         if col_name == 'province':
-                temp_released =  df_.loc[ 0 , "released"]
-                df_['released'] = df_['released'].diff()
-                df_.loc[ 0 , "released"] = temp_released
+                df_["released"] = transform_accumulte(df_["released"] )
 
-        
-        df_['confirmed'] = df_['confirmed'].diff()
-        df_['deceased'] = df_['deceased'].diff()
-        df_.loc[ 0 , "confirmed"] = temp_confirmed
-        df_.loc[ 0 , "deceased"] = temp_deceased
         return df_
 
 def replace_negative_values(ser):
