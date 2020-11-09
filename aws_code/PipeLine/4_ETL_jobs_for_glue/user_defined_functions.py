@@ -3,6 +3,24 @@ import pandas as pd
 
 input_files_location = 'D:/DataManagement-2/DS4C_DataSet_pandas_checking/'
 
+provience_codes = {'Seoul' : 10000,
+                'Busan' : 11000,
+                'Daegu' : 12000,
+                'Incheon': 14000, 
+                'Gwangju': 13000, 
+                'Daejeon' : 15000,
+                'Ulsan' : 16000, 
+                'Sejong' : 17000,
+                'Gyeonggi-do' : 20000 ,
+                'Gangwon-do' : 30000, 
+                'Chungcheongbuk-do' : 40000,
+                'Chungcheongnam-do' : 41000,
+                'Jeollabuk-do' : 50000,
+                'Jeollanam-do' : 51000, 
+                'Gyeongsangbuk-do' : 60000, 
+                'Gyeongsangnam-do' : 61000,
+                'Jeju-do' : 70000 }
+
 # converting accumulated values into normal day wise values
 def transform_accumulte(ser):
         temp= ser[0]

@@ -1,7 +1,7 @@
 # importing all requried packages
 import pandas as pd 
 import numpy as np
-from user_defined_functions import transform_slices , replace_negative_values , input_files_location
+from user_defined_functions import transform_slices , replace_negative_values , input_files_location ,provience_codes
 
 
 # Taking path variables requried
@@ -32,24 +32,7 @@ df.to_csv(staging_file)
 
 # Adding Provice Code from Another dataframe
 def get_provice_code(row):
-        codes = {'Seoul' : 10000,
-                'Busan' : 11000,
-                'Daegu' : 12000,
-                'Incheon': 14000, 
-                'Gwangju': 13000, 
-                'Daejeon' : 15000,
-                'Ulsan' : 16000, 
-                'Sejong' : 17000,
-                'Gyeonggi-do' : 20000 ,
-                'Gangwon-do' : 30000, 
-                'Chungcheongbuk-do' : 40000,
-                'Chungcheongnam-do' : 41000,
-                'Jeollabuk-do' : 50000,
-                'Jeollanam-do' : 51000, 
-                'Gyeongsangbuk-do' : 60000, 
-                'Gyeongsangnam-do' : 61000,
-                'Jeju-do' : 70000 }
-        return codes[row['province']]
+        return provience_codes[row['province']]
 
 df['provice_code'] = df.apply(get_provice_code, axis=1)
 
