@@ -9,6 +9,7 @@ resource "aws_redshift_cluster" "ETL_Redshift_cluster" {
   master_password    = var.db_password
   node_type          = "dc1.large"
   cluster_type       = "single-node"
+  skip_final_snapshot = true
 }
 
 

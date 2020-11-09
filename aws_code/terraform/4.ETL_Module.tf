@@ -14,12 +14,17 @@ module "ETL_crawler" {
 
 
 module "ETL_Redshift_cluster" {
-    
     source = "./tf_Resources/redshift"
     cluster_identifier = "dm-2-etl-cluster"
-    db_name = "dm-2-etl"
+    db_name = "dm_2_etl_db"
+    db_username = "dm"
+    db_password = "Dm2$4444"
 
-    db_username = "dm-2-etl"
-    db_password = "12345678"
+}
+
+module "ETL_Glue_job_1" {
+    source = "./tf_Resources/glue_jobs"
+    glue_job_name = "Job_1"
+    role = module.ETL_glue_role.glue_arn
 
 }

@@ -19,10 +19,3 @@ dynamic "dynamodb_target" {
     }
   }
 }
-
-/*
-resource "aws_glue_catalog_table" "example_catalog_table" {
-  name          = "example_catalog_table"
-  database_name = aws_glue_catalog_database.example_catalog_database.name
-}
-*/
