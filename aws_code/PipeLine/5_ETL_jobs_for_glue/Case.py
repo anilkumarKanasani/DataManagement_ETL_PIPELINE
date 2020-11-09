@@ -9,7 +9,7 @@ input_file = input_files_location + "Case.csv"
 staging_file= "D:/DataManagement-2/Staging_files/temp_Case.csv"
 Transformed_file= "D:/DataManagement-2/Transfomed_files/Transformed_Case.csv"
 
-# Extracting Data from DynamoDB
+######################### EXTRACTION PHASE ############################################################
 df = pd.read_csv(input_file)
 
 
@@ -62,5 +62,5 @@ df.to_csv(staging_file)
 
 df = df[['case_id', 'province' , 'province_code'  , 'city' , 'confirmed' , 'latitude' , 'longitude' ]]
 
-# Generating Transformed csv file
+######################### LOADING PHASE ############################################################
 df.to_csv(Transformed_file, index=False)

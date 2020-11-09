@@ -4,15 +4,16 @@ import numpy as np
 from user_defined_functions import replace_negative_values , input_files_location
 
 
+
 # Taking path variables requried
 input_file = input_files_location + "Region.csv"
 staging_file= "D:/DataManagement-2/Staging_files/temp_Region.csv"
 Transformed_file= "D:/DataManagement-2/Transfomed_files/Transformed_Region.csv"
 
-# Extracting Data from DynamoDB
+######################### EXTRACTION PHASE ############################################################
 df = pd.read_csv(input_file)
 
-######################### TRAANSFORMAITON PHASE ############################################################
+######################### TRANSFORMAITON PHASE ############################################################
 
 # Removing all string values in numberical columnes and replacing with empty cells
 numberic_cols = ['code' ,  'latitude' , 'longitude' , 'elementary_school_count',
@@ -48,5 +49,6 @@ for col in numberic_cols:
 
 # No slicing requried for this table. This is static data.
 
+######################### LOADING PHASE ############################################################
 # Generating Transformed csv file
 df.to_csv(Transformed_file, index=False)

@@ -9,11 +9,11 @@ input_file = input_files_location + "Weather.csv"
 staging_file= "D:/DataManagement-2/Staging_files/temp_Weather.csv"
 Transformed_file= "D:/DataManagement-2/Transfomed_files/Transformed_Weather.csv"
 
-# Extracting Data from DynamoDB
+######################### EXTRACTION PHASE ############################################################
 df_ = pd.read_csv(input_file)
 
 
-######################### TRAANSFORMAITON PHASE ############################################################
+######################### TRANSFORMAITON PHASE ############################################################
 
 # Checking for Schema Completence Quality Dimension
 # Deleting unwanted attributes in schema
@@ -82,7 +82,7 @@ df = temp.sort_values(by=['slice_no' , 'provice_code'], ascending=[True, True])
 df.to_csv(staging_file)
 
 
+######################### LOADING PHASE ############################################################
 df = df[['slice_no', 'date' , 'provice_code' , 'province', 'avg_temp' , 'min_temp' , 'max_temp' , 'precipitation' ,  'max_wind_speed' , 'most_wind_direction',
         'avg_relative_humidity' ]]
-# Generating Transformed csv file
 df.to_csv(Transformed_file, index=False)

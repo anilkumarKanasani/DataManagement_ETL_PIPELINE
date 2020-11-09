@@ -9,14 +9,10 @@ input_file = input_files_location + "TimeProvince.csv"
 staging_file= "D:/DataManagement-2/Staging_files/temp_TimeProvince.csv"
 Transformed_file= "D:/DataManagement-2/Transfomed_files/Transformed_TimeProvince.csv"
 
-# Extracting Data from DynamoDB
+######################### EXTRACTION PHASE ############################################################
 df_ = pd.read_csv(input_file)
 
-list_of_proviences = ['Seoul' ,'Busan' ,'Daegu' ,'Incheon', 'Gwangju', 'Daejeon' ,'Ulsan', 'Sejong',
-                        'Gyeonggi-do' ,'Gangwon-do', 'Chungcheongbuk-do' ,'Chungcheongnam-do',
-                        'Jeollabuk-do' ,'Jeollanam-do', 'Gyeongsangbuk-do', 'Gyeongsangnam-do',
-                        'Jeju-do']
-
+list_of_proviences = list(provience_codes.keys())
 
 ######################### TRAANSFORMAITON PHASE ############################################################
 
@@ -67,7 +63,7 @@ for current_pro in list_of_proviences:
 df = temp.sort_values(by=['slice_no' , 'provice_code'], ascending=[True, True])
 
 
-
+######################### LOADING PHASE ############################################################
 df = df[['slice_no', 'date' , 'provice_code' , 'province'  , 'confirmed' , 'released', 'deceased'   ]]
-# Generating Transformed csv file
+
 df.to_csv(Transformed_file, index=False)

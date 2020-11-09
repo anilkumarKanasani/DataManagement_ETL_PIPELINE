@@ -1,7 +1,7 @@
 # importing all requried packages
 import pandas as pd 
 import numpy as np
-from user_defined_functions import transform_slices , input_files_location
+from user_defined_functions import transform_slices , input_files_location ,age_group_codes
 
 
 # Taking path variables requried
@@ -9,10 +9,10 @@ input_file = input_files_location + "TimeAge.csv"
 staging_file= "D:/DataManagement-2/Staging_files/temp_TimeAge.csv"
 Transformed_file= "D:/DataManagement-2/Transfomed_files/Transformed_TimeAge.csv"
 
-# Extracting Data from DynamoDB
+######################### EXTRACTION PHASE ############################################################
 df_ = pd.read_csv(input_file)
 
-list_of_ages = ['0s' , '10s' , '20s' , '30s' , '40s' , '50s' , '60s' , '70s' , '80s' ]
+list_of_ages = list(age_group_codes.keys())
 
 ######################### TRAANSFORMAITON PHASE ############################################################
 
@@ -51,16 +51,7 @@ df.to_csv(staging_file)
 
 # Adding Provice Code from Another dataframe
 def get_age_group(row):
-        codes = {'0s' : 1,
-                '10s' : 2,
-                '20s' : 3,
-                '30s': 4, 
-                '40s': 5, 
-                '50s' : 6,
-                '60s' : 7, 
-                '70s' : 8,
-                '80s' : 9 }
-        return codes[row['age']]
+        return age_group_codes[row['age']]
 
 df['age_group'] = df.apply(get_age_group, axis=1)
 
@@ -109,9 +100,9 @@ for current_age in list_of_ages:
 df = temp.sort_values(by=['slice_no' , 'age_group'], ascending=[True, True])
 
 
-
+######################### LOADING PHASE ############################################################
 df = df[['slice_no', 'date' , 'age'  , 'age_group' , 'confirmed' , 'deceased' ]]
-# Generating Transformed csv file
+
 df.to_csv(Transformed_file, index=False)
 
 

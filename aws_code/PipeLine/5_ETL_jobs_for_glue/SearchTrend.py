@@ -9,7 +9,7 @@ input_file = input_files_location + "SearchTrend.csv"
 staging_file= "D:/DataManagement-2/Staging_files/temp_SearchTrend.csv"
 Transformed_file= "D:/DataManagement-2/Transfomed_files/Transformed_SearchTrend.csv"
 
-# Extracting Data from DynamoDB
+######################### EXTRACTION PHASE ############################################################
 df_ = pd.read_csv(input_file)
 
 
@@ -57,7 +57,7 @@ df['slice_no'] = pd.Series ([ i for i in range (1,df.shape[0]+1)])
 df.to_csv(staging_file)
 
 
-
+######################### LOADING PHASE ############################################################
 df = df[['slice_no', 'date' , 'cold' , 'flu' ,  'pneumonia' ,  'coronavirus' ]]
-# Generating Transformed csv file
+
 df.to_csv(Transformed_file, index=False)

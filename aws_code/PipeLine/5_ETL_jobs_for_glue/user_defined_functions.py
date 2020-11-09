@@ -30,6 +30,18 @@ list_of_cities = ['Seoul', 'Gangnam-gu', 'Gangdong-gu', 'Gangbuk-gu', 'Gangseo-g
 'Gurye-gun', 'Naju-si', 'Damyang-gun', 'Mokpo-si', 'Muan-gun', 'Boseong-gun', 'Suncheon-si', 'Sinan-gun', 'Yeosu-si', 'Yeonggwang-gun', 'Yeongam-gun', 'Wando-gun', 'Jangseong-gun', 'Jangheung-gun', 'Jindo-gun', 'Hampyeong-gun', 'Haenam-gun', 'Hwasun-gun', 'Gyeongsangbuk-do', 'Gyeongsan-si', 'Gyeongju-si', 'Goryeong-gun', 'Gumi-si', 'Gunwi-gun', 'Gimcheon-si', 'Mungyeong-si', 'Bonghwa-gun', 'Sangju-si', 'Seongju-gun', 'Andong-si', 'Yeongdeok-gun', 'Yeongyang-gun', 'Yeongju-si', 'Yeongcheon-si', 'Yecheon-gun', 'Ulleung-gun', 'Uljin-gun', 'Uiseong-gun', 'Cheongdo-gun', 'Cheongsong-gun', 'Chilgok-gun', 'Pohang-si', 'Gyeongsangnam-do', 'Geoje-si', 'Geochang-gun', 'Gimhae-si', 'Namhae-gun', 'Miryang-si', 'Sacheon-si', 'Sancheong-gun', 'Yangsan-si', 'Uiryeong-gun', 'Jinju-si', 'Changnyeong-gun', 'Changwon-si', 'Tongyeong-si', 'Hadong-gun', 'Haman-gun', 'Hamyang-gun', 'Hapcheon-gun', 'Jeju-do', 'Korea']
 
 
+# Standard considered accross all tables of this project
+age_group_codes = {'0s' : 1,
+                '10s' : 2,
+                '20s' : 3,
+                '30s': 4, 
+                '40s': 5, 
+                '50s' : 6,
+                '60s' : 7, 
+                '70s' : 8,
+                '80s' : 9 }
+
+
 # converting accumulated values into normal day wise values
 def transform_accumulte(ser):
         temp= ser[0]

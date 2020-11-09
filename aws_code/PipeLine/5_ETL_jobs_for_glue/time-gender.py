@@ -1,7 +1,7 @@
 # importing all requried packages
 import pandas as pd 
 import numpy as np
-from user_defined_functions import transform_slices , replace_negative_values , input_files_location
+from user_defined_functions import transform_slices , replace_negative_values , input_files_location 
 
 
 # Taking path variables requried
@@ -9,7 +9,7 @@ input_file = input_files_location + "TimeGender.csv"
 staging_file= "D:/DataManagement-2/Staging_files/temp_TimeGender.csv"
 Transformed_file= "D:/DataManagement-2/Transfomed_files/Transformed_TimeGender.csv"
 
-# Extracting Data from DynamoDB
+######################### EXTRACTION PHASE ############################################################
 df_ = pd.read_csv(input_file)
 
 
@@ -55,14 +55,7 @@ df.to_csv(staging_file)
 # Checking for Validity Quality Dimension
 # If the date  & sex are not as per format, then replace with default value
 
-li = []
-for value in df['sex']:
-        if value in ['male' ,'female' ]:
-                li.append(value)
-        else:
-                li.append('male')
-
-df['sex'] = pd.Series(li)
+df.loc[~df.sex.isin(['male' , 'female']), 'sex'] = 'male'
 
 
 df['confirmed'] = replace_negative_values (df['confirmed'])
@@ -75,8 +68,9 @@ df_female = transform_slices ( df , "sex" , "female")
 
 df = pd.concat([df_male , df_female]).sort_values(by=['slice_no'])
 
+######################### LOADING PHASE ############################################################
 df = df[['slice_no', 'date' , 'sex' , 'confirmed' , 'deceased' ]]
-# Generating Transformed csv file
+
 df.to_csv(Transformed_file, index=False)
 
 
