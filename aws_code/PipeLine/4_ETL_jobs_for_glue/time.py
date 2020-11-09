@@ -1,14 +1,10 @@
 # importing all requried packages
 import pandas as pd 
 import numpy as np
-from user_defined_functions import transform_slices , replace_negative_values
+from user_defined_functions import transform_slices , replace_negative_values , transform_accumulte
 
 
-def transform_accumulte(ser):
-        temp= ser[0]
-        ser = ser.diff()
-        ser[0] = temp
-        return ser
+
 
 # Taking path variables requried
 input_file = "D:/DataManagement-2/DS4C_DataSet_pandas_checking/Time.csv"
