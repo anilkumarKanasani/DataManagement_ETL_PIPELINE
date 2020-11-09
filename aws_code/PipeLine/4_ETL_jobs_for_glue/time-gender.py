@@ -25,6 +25,15 @@ df = (
 df.to_csv(staging_file)
 
 
+# Removing all string values in numberical columnes and replacing with empty cells
+numberic_cols = [ 'confirmed' ,  'deceased' ]
+
+for col in  numberic_cols:
+        df[col] = pd.to_numeric(df[col], errors='coerce')
+
+
+df.to_csv(staging_file)
+
 # Chekcing for consistency Quality Dimension
 
 

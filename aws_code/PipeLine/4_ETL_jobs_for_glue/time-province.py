@@ -63,6 +63,15 @@ df = (
 # Replacing file in staging folder with latest
 df.to_csv(staging_file)
 
+# Removing all string values in numberical columnes and replacing with empty cells
+numberic_cols = [ 'confirmed' , 'released' ,  'deceased' ]
+
+for col in  numberic_cols:
+        df[col] = pd.to_numeric(df[col], errors='coerce')
+
+
+df.to_csv(staging_file)
+
 df['confirmed'] = replace_negative_values (df['confirmed'])
 df['deceased'] = replace_negative_values (df['deceased'])
 df['released'] = replace_negative_values (df['released'])

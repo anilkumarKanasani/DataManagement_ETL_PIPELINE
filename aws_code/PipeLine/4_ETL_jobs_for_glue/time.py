@@ -26,6 +26,15 @@ df = (
 # Saving into staging folder
 df.to_csv(staging_file)
 
+# Removing all string values in numberical columnes and replacing with empty cells
+numberic_cols = ['test' , 'negative' , 'confirmed' , 'released' ,  'deceased' ]
+
+for col in  numberic_cols:
+        df[col] = pd.to_numeric(df[col], errors='coerce')
+
+
+df.to_csv(staging_file)
+
 # Checking for value completency Quality Dimension
 # If any null values, it will fillup with before row value in that column
 df = (
