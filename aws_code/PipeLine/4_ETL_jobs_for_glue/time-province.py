@@ -30,12 +30,29 @@ df = (
 df.to_csv(staging_file)
 
 
+# Adding Provice Code from Another dataframe
+def get_provice_code(row):
+        codes = {'Seoul' : 10000,
+                'Busan' : 11000,
+                'Daegu' : 12000,
+                'Incheon': 14000, 
+                'Gwangju': 13000, 
+                'Daejeon' : 15000,
+                'Ulsan' : 16000, 
+                'Sejong' : 17000,
+                'Gyeonggi-do' : 20000 ,
+                'Gangwon-do' : 30000, 
+                'Chungcheongbuk-do' : 40000,
+                'Chungcheongnam-do' : 41000,
+                'Jeollabuk-do' : 50000,
+                'Jeollanam-do' : 51000, 
+                'Gyeongsangbuk-do' : 60000, 
+                'Gyeongsangnam-do' : 61000,
+                'Jeju-do' : 70000 }
+        return codes[row['province']]
 
+df['provice_code'] = df.apply(get_provice_code, axis=1)
 
-# Chekcing for consistency Quality Dimension
-
-
-#df['province'] = df['province'].str.lower()
 
 # Checking for value completency Quality Dimension
 # If any null values, it will fillup with before row value in that column
@@ -55,10 +72,10 @@ temp = pd.DataFrame()
 for current_pro in list_of_proviences:
         temp = temp.append([transform_slices ( df , "province" , current_pro) ] )
 
-df = temp.sort_values(by=['slice_no'])
+df = temp.sort_values(by=['slice_no' , 'provice_code'], ascending=[True, True])
 
 
 
-df = df[['slice_no', 'date' , 'province'  , 'confirmed' , 'released', 'deceased'   ]]
+df = df[['slice_no', 'date' , 'provice_code' , 'province'  , 'confirmed' , 'released', 'deceased'   ]]
 # Generating Transformed csv file
 df.to_csv(Transformed_file, index=False)

@@ -40,7 +40,20 @@ df = (
 # Replacing file in staging folder with latest
 df.to_csv(staging_file)
 
+# Adding Provice Code from Another dataframe
+def get_age_group(row):
+        codes = {'0s' : 1,
+                '10s' : 2,
+                '20s' : 3,
+                '30s': 4, 
+                '40s': 5, 
+                '50s' : 6,
+                '60s' : 7, 
+                '70s' : 8,
+                '80s' : 9 }
+        return codes[row['age']]
 
+df['age_group'] = df.apply(get_age_group, axis=1)
 
 
 # Checking for Validity Quality Dimension
@@ -84,11 +97,11 @@ for current_age in list_of_ages:
         temp = temp.append([transform_slices ( df , "age" , current_age) ] )
 
 
-df = temp.sort_values(by=['slice_no'])
+df = temp.sort_values(by=['slice_no' , 'age_group'], ascending=[True, True])
 
 
 
-df = df[['slice_no', 'date' , 'age'  , 'confirmed' , 'deceased' ]]
+df = df[['slice_no', 'date' , 'age'  , 'age_group' , 'confirmed' , 'deceased' ]]
 # Generating Transformed csv file
 df.to_csv(Transformed_file, index=False)
 
