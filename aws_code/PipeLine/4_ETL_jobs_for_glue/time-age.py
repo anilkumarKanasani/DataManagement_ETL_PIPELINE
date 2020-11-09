@@ -12,6 +12,7 @@ Transformed_file= "D:/DataManagement-2/Transfomed_files/Transformed_TimeAge.csv"
 # Extracting Data from DynamoDB
 df_ = pd.read_csv(input_file)
 
+list_of_ages = ['0s' , '10s' , '20s' , '30s' , '40s' , '50s' , '60s' , '70s' , '80s' ]
 
 ######################### TRAANSFORMAITON PHASE ############################################################
 
@@ -47,7 +48,7 @@ df.to_csv(staging_file)
 
 li = []
 for value in df['age']:
-        if value in ['0s' , '10s' , '20s' , '30s' , '40s' , '50s' , '60s' , '70s' , '80s' ]:
+        if value in list_of_ages :
                 li.append(value)
         else:
                 li.append('40s')
@@ -75,17 +76,15 @@ for value in df['deceased']:
 
 df['deceased'] = pd.Series(li)
 
-df_0s = transform_slices ( df , "age" , "0s")
-df_10s = transform_slices ( df , "age" , "10s")
-df_20s = transform_slices ( df , "age" , "20s")
-df_30s = transform_slices ( df , "age" , "30s")
-df_40s = transform_slices ( df , "age" , "40s")
-df_50s = transform_slices ( df , "age" , "50s")
-df_60s = transform_slices ( df , "age" , "60s")
-df_70s = transform_slices ( df , "age" , "70s")
-df_80s = transform_slices ( df , "age" , "80s")
 
-df = pd.concat([df_0s , df_10s , df_20s , df_30s , df_40s , df_50s , df_60s , df_70s , df_80s]).sort_values(by=['slice_no'])
+
+
+temp = pd.DataFrame()
+for current_age in list_of_ages:
+        temp = temp.append([transform_slices ( df , "age" , current_age) ] )
+
+
+df = temp.sort_values(by=['slice_no'])
 
 
 
