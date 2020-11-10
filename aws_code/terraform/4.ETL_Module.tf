@@ -45,7 +45,7 @@ module "ETL_transformed_bucket" {
     source = "./tf_Resources/transformed_s3"
 
     # No Default Value
-    bucket_name = "transformed-data"
+    bucket_name = "transformed-dm2-etl-data"
     # No Default value
     bucket_tag = "transformed-data-lake" 
 }
@@ -58,6 +58,6 @@ module "ETL_S3_crawler" {
     role = module.ETL_glue_role.glue_arn
     crawler_name = "transformed_data_crawler" 
     database_name = "transformed-data"
-    s3_bucket_path = "s3://transformed-data"
+    s3_bucket_path = "s3://transformed-dm2-etl-data"
 
 }

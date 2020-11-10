@@ -10,7 +10,7 @@ list_of_transformed_files = os.listdir(data_set_local_path) # List of all files 
 s3_client = boto3.resource('s3')
 
 # Capturing our transformed bucket name
-BUCKET = "transformed-data"
+BUCKET = "transformed-dm2-etl-data"
 
 
 # Looping overall local files and uploading into transformed-data-lake file by file into the same bucket ( lake )
