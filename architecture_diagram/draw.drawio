@@ -1,4 +1,4 @@
-<mxfile modified="2020-11-10T13:45:42.878Z" host="app.diagrams.net" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.183 Safari/537.36" etag="_l-MUolFZuEGSvsN3OOM" version="13.9.2" type="github">
+<mxfile modified="2020-11-10T13:47:06.966Z" host="app.diagrams.net" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.183 Safari/537.36" etag="d-TNUZXxwDXeOLttM03Z" version="13.9.2" type="github">
   <diagram id="Ht1M8jgEwFfnCIfOTk4-" name="Page-1">
     <mxGraphModel dx="4768" dy="3208" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" math="0" shadow="0">
       <root>
@@ -432,6 +432,9 @@
         </mxCell>
         <mxCell id="hV9DmxrJN-JSG0bnAaLr-138" value="&lt;span style=&quot;font-size: 18px&quot;&gt;MAIL NOTIFICATION&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="1800" y="520" width="185" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="hV9DmxrJN-JSG0bnAaLr-141" value="&lt;font&gt;&lt;font style=&quot;font-size: 36px&quot;&gt;NOSQL TABLES&amp;nbsp;&lt;br&gt;AS STAGING DATA BASES&lt;/font&gt;&lt;br&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontColor=#FF0000;" vertex="1" parent="1">
+          <mxGeometry x="2353" y="2200" width="506" height="90" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
