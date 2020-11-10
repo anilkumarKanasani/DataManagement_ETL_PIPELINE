@@ -21,6 +21,7 @@ for crawler in list_of_raw_crawlers:
     except:
         response = glue_client.update_crawler( Name = crawler)
         print(crawler + ' Catalog tables are updating..SCANNING INPROGRESS  Please wait for some time to get latest catalog tables')
+    print('----------------------------------------------------------------------------------------')
 
 
 
