@@ -150,12 +150,6 @@ default = ["tranformed-hospital-record-cases" ,
 type = list(string)
 }
 
-
-
-
-
-
-
 variable "list_of_tranformed_s3_buckets_names" {
 default = ["s3://tranformed-hospital-record-cases" , 
                 "s3://tranformed-patient-info" , 
@@ -188,6 +182,21 @@ type = list(string)
 }
 
 
+variable "list_of_transformed_dbs" {
+default = ["transformed-db-hospital-record-cases" , 
+                "transformed-db-patient-info" , 
+                "transformed-db-region-south-korea", 
+                "transformed-db-search-trend-south-korea",
+                "transformed-db-time-reported" , 
+                "transformed-db-time-age" , 
+                "transformed-db-time-gender" , 
+                "transformed-db-time-provience" , 
+                "transformed-db-weather-south-korea",
+                ]
+
+type = list(string)
+}
+
 variable "list_of_raw_s3_buckets_names" {
 default = ["s3://dumped-hospital-record-cases" , 
                 "s3://dumped-patient-info" , 
@@ -214,6 +223,22 @@ default = ["raw-data-crawler-hospital-record-cases" ,
                 "raw-data-crawler-time-gender" , 
                 "raw-data-crawler-time-provience" , 
                 "raw-data-crawler-weather-south-korea",
+                ]
+
+type = list(string)
+}
+
+
+variable "list_of_raw_dbs" {
+default = ["raw-db-hospital-record-cases" , 
+                "raw-db-patient-info" , 
+                "raw-db-region-south-korea", 
+                "raw-db-search-trend-south-korea",
+                "raw-db-time-reported" , 
+                "raw-db-time-age" , 
+                "raw-db-time-gender" , 
+                "raw-db-time-provience" , 
+                "raw-db-weather-south-korea",
                 ]
 
 type = list(string)

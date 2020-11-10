@@ -6,7 +6,7 @@ module "ETL_raw_crawler" {
 
     role = module.ETL_glue_role.glue_arn
     crawler_name = element(var.list_of_raw_crawlers, count.index)
-    database_name = "raw-data"
+    database_name = element(var.list_of_raw_dbs, count.index)
     raw_s3_bucket = element(var.list_of_raw_s3_buckets_names, count.index)
     count      = length(var.list_of_raw_s3_buckets_names)
 }
@@ -56,7 +56,7 @@ module "ETL_transform_crawler" {
 
     role = module.ETL_glue_role.glue_arn
     crawler_name = element(var.list_of_tranformed_crawlers, count.index) 
-    database_name = "transformed-data"
+    database_name = element(var.list_of_transformed_dbs, count.index)
 
     transformed_s3_bucket = element(var.list_of_tranformed_s3_buckets_names, count.index)
     count      = length(var.list_of_tranformed_s3_buckets_names)

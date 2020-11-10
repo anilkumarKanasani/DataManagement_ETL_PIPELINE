@@ -22,4 +22,4 @@ for crawler in list_of_transformed_crawlers:
         print(crawler + ' Catalog table is created in Glue Database named "transformed-data".. SCANNING INPROGRESS Please wait for some time to get the catalog tables')
     except:
         response = glue_client.update_crawler( Name = crawler)
-        print(crawler + ' Catalog tables are updating..SCANNING INPROGRESS  Please wait for some time to get latest catalog tables")
+        print(crawler + ' Catalog tables are updating..SCANNING INPROGRESS  Please wait for some time to get latest catalog tables')
