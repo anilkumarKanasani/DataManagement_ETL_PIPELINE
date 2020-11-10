@@ -6,4 +6,4 @@ For more information on the Data , please gothrough the following kaggle link
 https://www.kaggle.com/kimjihoo/coronavirusdataset
 
 
-![alt text here] (Slide1.JPG)
+<img src = "readme_images/Slide1.JPG>
