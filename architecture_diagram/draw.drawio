@@ -1,4 +1,4 @@
-<mxfile modified="2020-11-10T13:15:24.007Z" host="app.diagrams.net" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.183 Safari/537.36" etag="VuIHSO8gRotxtx-TQbtK" version="13.9.2" type="github">
+<mxfile modified="2020-11-10T13:16:51.481Z" host="app.diagrams.net" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.183 Safari/537.36" etag="Z7WWWLkRTTh1QY0ZIJTO" version="13.9.2" type="github">
   <diagram id="Ht1M8jgEwFfnCIfOTk4-" name="Page-1">
     <mxGraphModel dx="2980" dy="2005" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" math="0" shadow="0">
       <root>
@@ -19,8 +19,8 @@
         <mxCell id="8GEFBkU2QKpO8UW0B2yC-7" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn3.iconfinder.com/data/icons/facebook-ui-flat/48/Facebook_UI-08-128.png" parent="1" vertex="1">
           <mxGeometry x="294" y="1540" width="250" height="250" as="geometry" />
         </mxCell>
-        <mxCell id="8GEFBkU2QKpO8UW0B2yC-8" value="" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="630" y="40" width="840" height="2260" as="geometry" />
+        <mxCell id="8GEFBkU2QKpO8UW0B2yC-8" value="" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;strokeColor=#666666;gradientDirection=north;fillColor=#F3F5C2;" parent="1" vertex="1">
+          <mxGeometry x="600" y="38" width="860" height="2260" as="geometry" />
         </mxCell>
         <mxCell id="8GEFBkU2QKpO8UW0B2yC-9" value="" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#277116;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.bucket_with_objects;" parent="1" vertex="1">
           <mxGeometry x="971.16" y="396" width="107.69" height="112" as="geometry" />
