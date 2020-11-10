@@ -1,6 +1,6 @@
-<mxfile modified="2020-11-10T13:48:43.669Z" host="app.diagrams.net" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.183 Safari/537.36" etag="zW7CFFPPL5csPRtk8BmF" version="13.9.2" type="github">
+<mxfile modified="2020-11-10T13:49:53.464Z" host="app.diagrams.net" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.183 Safari/537.36" etag="_irxKcfpBESt6M60HVpv" version="13.9.2" type="github">
   <diagram id="Ht1M8jgEwFfnCIfOTk4-" name="Page-1">
-    <mxGraphModel dx="3973" dy="2673" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" math="0" shadow="0">
+    <mxGraphModel dx="2980" dy="2005" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -437,10 +437,13 @@
           <mxGeometry x="2353" y="2200" width="506" height="90" as="geometry" />
         </mxCell>
         <mxCell id="hV9DmxrJN-JSG0bnAaLr-142" value="" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#5A30B5;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.glue_crawlers;" vertex="1" parent="1">
-          <mxGeometry x="3009" y="1116" width="206" height="206" as="geometry" />
+          <mxGeometry x="3076" y="1080" width="199" height="199" as="geometry" />
         </mxCell>
         <mxCell id="hV9DmxrJN-JSG0bnAaLr-143" value="" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#5A30B5;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.glue_data_catalog;" vertex="1" parent="1">
           <mxGeometry x="3408" y="1070" width="245.54" height="266" as="geometry" />
+        </mxCell>
+        <mxCell id="hV9DmxrJN-JSG0bnAaLr-144" value="&lt;font&gt;&lt;font style=&quot;font-size: 36px&quot;&gt;GLUE CRAWLER SCANS&lt;br&gt;ALL STAGING DATA TABLES&lt;/font&gt;&lt;br&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontColor=#FF0000;" vertex="1" parent="1">
+          <mxGeometry x="2906" y="2193" width="506" height="90" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
