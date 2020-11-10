@@ -17,3 +17,4 @@ https://www.kaggle.com/kimjihoo/coronavirusdataset
 ![Alt text](/readme_images/Slide8.JPG?raw=true "Optional Title")
 ![Alt text](/readme_images/Slide9.JPG?raw=true "Optional Title")
 ![Alt text](/readme_images/Slide10.JPG?raw=true "Optional Title")
+![Alt text](/readme_images/Slide11.JPG?raw=true "Optional Title")
