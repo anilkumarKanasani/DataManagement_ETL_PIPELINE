@@ -11,7 +11,7 @@ s3_client = boto3.resource('s3')
 
 # Capturing our transformed buckets names
 
- LIST_OF_TRANSFORMED_BUCKETS =["tranformed-hospital-record-cases" , 
+LIST_OF_TRANSFORMED_BUCKETS =["tranformed-hospital-record-cases" , 
                 "tranformed-patient-info" , 
                 "tranformed-region-south-korea", 
                 "tranformed-search-trend-south-korea",
@@ -24,7 +24,7 @@ s3_client = boto3.resource('s3')
 
 
 # Looping overall local files and uploading into transformed-data-lake file by file into the same bucket ( lake )
-for file , BUCKET in zip(list_of_dumped_files , LIST_OF_TRANSFORMED_BUCKETS):
+for file , BUCKET in zip(list_of_transformed_files , LIST_OF_TRANSFORMED_BUCKETS):
     local_file = data_set_local_path + file
     s3_client.Bucket(BUCKET).upload_file(local_file, file)
 
