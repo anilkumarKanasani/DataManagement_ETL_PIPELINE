@@ -1,6 +1,6 @@
-<mxfile modified="2020-11-10T14:24:40.810Z" host="app.diagrams.net" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.183 Safari/537.36" etag="LxJ4QtCJBB3RR3Bna0MU" version="13.9.2" type="github">
+<mxfile modified="2020-11-10T14:27:36.696Z" host="app.diagrams.net" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.183 Safari/537.36" etag="Ys35PxR2YEs1XcXNigmr" version="13.9.2" type="github">
   <diagram id="Ht1M8jgEwFfnCIfOTk4-" name="Page-1">
-    <mxGraphModel dx="5960" dy="4010" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" math="0" shadow="0">
+    <mxGraphModel dx="4768" dy="3208" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -507,6 +507,30 @@
         </mxCell>
         <mxCell id="hV9DmxrJN-JSG0bnAaLr-157" value="&lt;font&gt;&lt;font style=&quot;font-size: 36px&quot;&gt;CATALOG TABLE&lt;br&gt;( OR )&lt;br&gt;DATA SHEET of ALL DATA SOURCES&lt;/font&gt;&lt;br&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontColor=#FF0000;" vertex="1" parent="1">
           <mxGeometry x="3666" y="1318" width="683" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="hV9DmxrJN-JSG0bnAaLr-158" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.athena;fillColor=#F58534;gradientColor=none;strokeColor=#000000;strokeWidth=10;fontColor=#FF0000;" vertex="1" parent="1">
+          <mxGeometry x="3875" y="1656" width="197" height="157" as="geometry" />
+        </mxCell>
+        <mxCell id="hV9DmxrJN-JSG0bnAaLr-159" value="&lt;font&gt;&lt;span style=&quot;font-size: 36px&quot;&gt;SQL QUERY SERVICE&lt;/span&gt;&lt;br&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontColor=#FF0000;" vertex="1" parent="1">
+          <mxGeometry x="3758" y="1820" width="486" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="hV9DmxrJN-JSG0bnAaLr-160" value="" style="endArrow=classic;html=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="3985" y="1435" as="sourcePoint" />
+            <mxPoint x="3980" y="1625" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hV9DmxrJN-JSG0bnAaLr-161" value="" style="outlineConnect=0;fontColor=#232F3E;gradientColor=#945DF2;gradientDirection=north;fillColor=#5A30B5;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.quicksight;" vertex="1" parent="1">
+          <mxGeometry x="3903" y="1998" width="185.75" height="185.75" as="geometry" />
+        </mxCell>
+        <mxCell id="hV9DmxrJN-JSG0bnAaLr-162" value="" style="endArrow=classic;html=1;entryX=0.528;entryY=-0.006;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="hV9DmxrJN-JSG0bnAaLr-159" target="hV9DmxrJN-JSG0bnAaLr-161">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="3983.25" y="1998.5" as="sourcePoint" />
+            <mxPoint x="3983" y="2006" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hV9DmxrJN-JSG0bnAaLr-163" value="&lt;font&gt;&lt;span style=&quot;font-size: 36px&quot;&gt;DASH BOARD SERVICE&lt;/span&gt;&lt;br&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontColor=#FF0000;" vertex="1" parent="1">
+          <mxGeometry x="3746" y="2212" width="486" height="90" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
