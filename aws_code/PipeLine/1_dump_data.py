@@ -3,7 +3,7 @@ import boto3
 import os
 
 # Getting the path for all local CSV Files
-data_set_local_path = 'D:/DataManagement-2/DS4C_DataSet_testing/'
+data_set_local_path = 'D:/DataManagement-2/DS4C_DataSet/'
 list_of_dumped_files = os.listdir(data_set_local_path) # List of all files in that local folder
 
 # S3 client to interact with AWS S3 resources

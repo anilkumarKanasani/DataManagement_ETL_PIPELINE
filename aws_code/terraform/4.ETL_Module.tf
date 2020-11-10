@@ -58,6 +58,6 @@ module "ETL_S3_crawler" {
     role = module.ETL_glue_role.glue_arn
     crawler_name = "transformed_data_crawler" 
     database_name = "transformed-data"
-    s3_bucket_path = "s3://transformed-dm2-etl-data"
+    s3_bucket_path = "s3://transformed-dm2-etl-data/"
 
 }
