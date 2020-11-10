@@ -18,7 +18,7 @@ variable "database_name" {
     type = string
 }
 
-variable "list_of_dynamo_table_names" {
+variable "list_of_raw_s3_buckets" {
     type = list(string)
 }
 

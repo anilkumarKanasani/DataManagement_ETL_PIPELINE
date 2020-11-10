@@ -130,3 +130,64 @@ default = ["CASE_ID" ,
 
 type = list(string)
 }
+
+
+######################################### Variables for ETL Module #########################################
+
+
+variable "list_of_tranformed_s3_buckets" {
+default = ["tranformed-hospital-record-cases" , 
+                "tranformed-patient-info" , 
+                "tranformed-region-south-korea", 
+                "tranformed-search-trend-south-korea",
+                "tranformed-time-reported" , 
+                "tranformed-time-age" , 
+                "tranformed-time-gender" , 
+                "tranformed-time-provience" , 
+                "tranformed-weather-south-korea",
+                ]
+
+type = list(string)
+}
+
+
+
+
+
+
+
+variable "list_of_tranformed_s3_buckets_names" {
+default = ["s3://tranformed-hospital-record-cases" , 
+                "s3://tranformed-patient-info" , 
+                "s3://tranformed-region-south-korea", 
+                "s3://tranformed-search-trend-south-korea",
+                "s3://tranformed-time-reported" , 
+                "s3://tranformed-time-age" , 
+                "s3://tranformed-time-gender" , 
+                "s3://tranformed-time-provience" , 
+                "s3://tranformed-weather-south-korea",
+                ]
+
+type = list(string)
+}
+
+
+variable "list_of_raw_s3_buckets_names" {
+default = ["s3://dumped-hospital-record-cases" , 
+                "s3://dumped-patient-info" , 
+                "s3://dumped-region-south-korea", 
+                "s3://dumped-search-trend-south-korea",
+                "s3://dumped-time-reported" , 
+                "s3://dumped-time-age" , 
+                "s3://dumped-time-gender" , 
+                "s3://dumped-time-provience" , 
+                "s3://dumped-weather-south-korea",
+                "s3://raw-schemaless-records",
+                "s3://raw-rejected-records"
+                ]
+
+type = list(string)
+}
+
+
+

@@ -19,8 +19,7 @@ variable "database_name" {
 }
 
 
-variable "s3_bucket_path" {
-    type = string
+variable "list_of_tranformed_s3_buckets" {
+    type = list(string)
 }
-
 
