@@ -6,7 +6,7 @@ resource "aws_glue_catalog_database" "ETL_catalog_database" {
 }
 
 
-resource "aws_glue_crawler" "ETL_crawler" {
+resource "aws_glue_crawler" "ETL_dynamo_crawler" {
   database_name = aws_glue_catalog_database.ETL_catalog_database.name
   name          = var.crawler_name
   role          = var.role
@@ -19,3 +19,15 @@ dynamic "dynamodb_target" {
     }
   }
 }
+
+resource "aws_glue_crawler" "ETL_S3_crawler" {
+  database_name = aws_glue_catalog_database.ETL_catalog_database.name
+  name          = var.crawler_name
+  role          = var.role
+
+  s3_target {
+    path = var.s3_bucket_path
+  }
+}
+
+

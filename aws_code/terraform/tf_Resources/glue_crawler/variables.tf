@@ -22,3 +22,8 @@ variable "list_of_dynamo_table_names" {
     type = list(string)
 }
 
+variable "s3_bucket_path" {
+    type = list(string)
+}
+
+
