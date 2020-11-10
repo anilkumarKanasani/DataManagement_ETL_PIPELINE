@@ -22,7 +22,7 @@ LIST_OF_BUCKETS = ["dumped-hospital-record-cases" ,
                 ]
 
 
-# Looping overall local files and uploading into dumped-data-lake file by file into the same bucket ( lake )
+# Looping overall local files and uploading into dumped-data-lake file by file into the corresponding bucket ( lake )
 for file , BUCKET in zip(list_of_dumped_files , LIST_OF_BUCKETS):
     local_file = data_set_local_path + file
     s3_client.Bucket(BUCKET).upload_file(local_file, file)

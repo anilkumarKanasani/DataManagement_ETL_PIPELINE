@@ -2,8 +2,8 @@
 # Creating S3 Bucket for Dumping CSV Data from different Data Sources
 
 
-module "ETL_bucket" {
-    source = "./tf_Resources/s3"
+module "ETL_raw_bucket" {
+    source = "./tf_Resources/raw_s3"
 
     # No Default Value
     bucket_name = element(var.list_of_buckets, count.index)

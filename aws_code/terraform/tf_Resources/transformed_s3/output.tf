@@ -3,5 +3,5 @@
 
 # Till now it is not used any where
 output "bucket_arn" {
-    value = aws_s3_bucket.ETL_bucket.arn
+    value = aws_s3_bucket.ETL_transformed_bucket.arn
 }

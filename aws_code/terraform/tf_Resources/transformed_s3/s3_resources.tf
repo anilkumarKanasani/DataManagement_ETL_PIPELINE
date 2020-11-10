@@ -2,7 +2,7 @@
 # Defining all resource specifications for s3 instances module
 
 
-resource "aws_s3_bucket" "ETL_bucket" {
+resource "aws_s3_bucket" "ETL_transformed_bucket" {
   bucket = var.bucket_name
   acl    = "private"
   force_destroy = true
