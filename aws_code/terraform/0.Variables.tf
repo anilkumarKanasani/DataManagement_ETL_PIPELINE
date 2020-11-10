@@ -172,6 +172,22 @@ type = list(string)
 }
 
 
+variable "list_of_tranformed_crawlers" {
+default = ["tranformed-data-crawler-hospital-record-cases" , 
+                "tranformed-data-crawler-patient-info" , 
+                "tranformed-data-crawler--region-south-korea", 
+                "tranformed-data-crawler-search-trend-south-korea",
+                "tranformed-data-crawler-time-reported" , 
+                "tranformed-data-crawler-time-age" , 
+                "tranformed-data-crawler-time-gender" , 
+                "tranformed-data-crawler-time-provience" , 
+                "tranformed-data-crawler-weather-south-korea",
+                ]
+
+type = list(string)
+}
+
+
 variable "list_of_raw_s3_buckets_names" {
 default = ["s3://dumped-hospital-record-cases" , 
                 "s3://dumped-patient-info" , 
@@ -182,12 +198,27 @@ default = ["s3://dumped-hospital-record-cases" ,
                 "s3://dumped-time-gender" , 
                 "s3://dumped-time-provience" , 
                 "s3://dumped-weather-south-korea",
-                "s3://raw-schemaless-records",
-                "s3://raw-rejected-records"
                 ]
 
 type = list(string)
 }
+
+
+variable "list_of_raw_crawlers" {
+default = ["raw-data-crawler-hospital-record-cases" , 
+                "raw-data-crawler-patient-info" , 
+                "raw-data-crawler-region-south-korea", 
+                "raw-data-crawler-search-trend-south-korea",
+                "raw-data-crawler-time-reported" , 
+                "raw-data-crawler-time-age" , 
+                "raw-data-crawler-time-gender" , 
+                "raw-data-crawler-time-provience" , 
+                "raw-data-crawler-weather-south-korea",
+                ]
+
+type = list(string)
+}
+
 
 
 
