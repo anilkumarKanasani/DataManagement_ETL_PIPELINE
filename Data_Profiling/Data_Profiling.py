@@ -1,4 +1,4 @@
-ort pandas as pd
+import pandas as pd
 from pandas_profiling import ProfileReport as pr
 import os
 
